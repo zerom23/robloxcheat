@@ -12,9 +12,10 @@ TOKEN = 'Token bot'
 BOTNAME = '@(put ur botame here)'
 s = '360'
 url='https://api.telegram.org/bot'+TOKEN+"/SetMyCommands?commands="
+#rename the commands if u want to in the code not only in the cmd part but other parts
 cmd=[{
      "command":"any command u want to put for this ig",
-     "description":"dsecription for bbosing"
+     "description":"dsecription for shutdown"
 },
 {
   "command":"any command u want to put for this ig",
@@ -75,8 +76,8 @@ def sublime(update: Updater,CallbackContext ,context):
 
                                            def socket1():
                                                while True:
-                                                  url2 = Updater.message.text.replace('/http_stresser2', '')
-                                                  Updater.dispatcher.add_handler(CommandHandler('http_stresser2', http_stresser2))
+                                                  url2 = Updater.message.text.replace('/socket1', '')
+                                                  Updater.dispatcher.add_handler(CommandHandler('socket1', socket1))
                                                   Updater.start_polling()
                                                   Updater.idle()
                                                   PACKETDATA = 'f1a525da11f6'.decode('hex')
