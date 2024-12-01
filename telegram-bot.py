@@ -8,8 +8,8 @@ import requests,json
 import socket
 import ipaddress
 import nmap
-TOKEN = '6709820541:AAHxFU-2PBvrkaGR1kmF_Ch8_QEgnXkxaXs'
-BOTNAME = '@FrostyNet_bot'
+TOKEN = 'TOKEN OF BOT'
+BOTNAME = 'PUT NAME OF THE BOT NIGGA'
 s = '360'
 url='https://api.telegram.org/bot'+TOKEN+"/SetMyCommands?commands="
 cmd=[{
